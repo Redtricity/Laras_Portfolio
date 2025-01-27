@@ -1,0 +1,12 @@
+# dependencies
+/node_modules
+
+# production build
+/build
+
+# random
+.DS_Store
+.env
+
+# IDE-specific
+.vscode
