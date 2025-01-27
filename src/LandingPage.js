@@ -1,10 +1,11 @@
 import React from "react";
+import ButterflyAnimation from "./ButterflyAnimation";
 
 
 function LandingPage() {
   return (
     <div className="landing-page">
-      {/* Hero Section */}
+      <ButterflyAnimation />
       <section className="hero">
         <h1>Welcome to Lara's Portfolio!</h1>
         <p>Where creativity meets code. Explore my journey, projects, and more!</p>

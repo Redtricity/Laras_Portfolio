@@ -59,7 +59,7 @@
   );
   background-size: 200% 200%;
   animation: gradientAnimation 10s ease infinite;
-  z-index: -1; /* Send the background behind all content */
+  z-index: -2; /* Send the background behind all content */
 }
 
 /* Keyframes for animating the gradient */
@@ -92,6 +92,7 @@
   color: white;
   text-align: center;
   padding: 0 2rem;
+  z-index: 1;
 }
 
 .hero h1 {
@@ -117,4 +118,31 @@
 
 .cta-button:hover {
   background-color: #ff1c8d;
+}
+
+/* Butterfly */
+.landing-page {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  z-index: 1; /* Ensure it stays above the animation */
+}
+
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
 }
