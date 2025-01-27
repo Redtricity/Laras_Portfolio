@@ -10,12 +10,14 @@
   top: 0;
   z-index: 1000;
   box-sizing: border-box;
+  font-family: 'Poppins', sans-serif; 
 }
 
 .logo {
   font-size: 1.5rem;
   font-weight: bold;
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  text-transform: uppercase;
 }
 
 .nav-links {
@@ -29,7 +31,7 @@
 .nav-links a {
   text-decoration: none;
   font-size: 1rem;
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   transition: color 0.3s;
 }
 
@@ -44,8 +46,33 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to bottom right, #ff0080, #ffccf0);
+  /* background: linear-gradient(135deg, #ff0080, #ffcccc); */
+  background: linear-gradient(
+    135deg, /* Angle of the gradient */
+    #ff66cc, /* First pink tone */
+    #ffccff 20%, /* Softer pink */
+    #b8b3fb 40%, /* Purple */
+    #aad5ff 60%, /* Blue */
+    #b8b3fb 80%, /* Purple */
+    #ffccff 90%, /* Softer pink */
+    #ff66cc /* Pink again */
+  );
+  background-size: 200% 200%;
+  animation: gradientAnimation 10s ease infinite;
   z-index: -1; /* Send the background behind all content */
+}
+
+/* Keyframes for animating the gradient */
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 
@@ -60,8 +87,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh; /* Full viewport height */
-  background: linear-gradient(135deg, #ff0080, #ffcccc); /* A nice pink gradient */
+  height: 100vh; 
+  /* background: linear-gradient(135deg, #ff0080, #ffcccc);  */
   color: white;
   text-align: center;
   padding: 0 2rem;
