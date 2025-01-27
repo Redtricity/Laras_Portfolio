@@ -1,37 +1,44 @@
-import React from "react";
+import React, { Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
-import Butterfly from "./Butterfly";
 import { OrbitControls } from "@react-three/drei";
+import Butterfly from "./Butterfly";
 
 export default function ButterflyAnimation() {
-  const sphereRadius = 2; // Radius of the butterfly cluster
-  const butterflyCount = 30; // Number of butterflies
-
-  // Generate consistent positions on a sphere
-  const butterflies = React.useMemo(() => {
-    return Array.from({ length: butterflyCount }, () => {
-      const u = Math.random();
-      const v = Math.random();
-      const theta = 2 * Math.PI * u;
-      const phi = Math.acos(2 * v - 1);
-      const x = sphereRadius * Math.sin(phi) * Math.cos(theta);
-      const y = sphereRadius * Math.sin(phi) * Math.sin(theta);
-      const z = sphereRadius * Math.cos(phi);
-      return [x, y, z];
-    });
-  }, [butterflyCount, sphereRadius]);
-
   return (
-    <Canvas>
-      <ambientLight intensity={0.5} />
-      <directionalLight position={[5, 5, 5]} />
-      {butterflies.map((position, index) => (
-        <Butterfly key={index} position={position} />
-      ))}
-      <OrbitControls enableZoom={false} enableRotate={false} />
-    </Canvas>
+    <div style={{ width: "100%", height: "100vh", position: "relative" }}>
+      {/* This Canvas is exclusively for Three.js elements */}
+      <Canvas camera={{ position: [0, 1, 5], fov: 50 }}>
+        <ambientLight intensity={0.5} />
+        <directionalLight position={[5, 5, 5]} />
+        <Suspense fallback={null}>
+          <Butterfly />
+        </Suspense>
+        <OrbitControls enableZoom={false} />
+      </Canvas>
+
+      {/* Add any UI outside the Canvas */}
+      <div
+        style={{
+          position: "absolute",
+          top: "10px",
+          left: "10px",
+          color: "white",
+          zIndex: 10,
+        }}
+      >
+        Optional Loading Indicator or UI
+      </div>
+    </div>
   );
 }
+
+
+
+
+
+
+
+
 
 
 

@@ -88,11 +88,10 @@
   justify-content: center;
   align-items: center;
   height: 100vh; 
-  /* background: linear-gradient(135deg, #ff0080, #ffcccc);  */
   color: white;
   text-align: center;
   padding: 0 2rem;
-  z-index: 1;
+  z-index: 2;
 }
 
 .hero h1 {
@@ -121,6 +120,8 @@
 }
 
 /* Butterfly */
+
+
 .landing-page {
   position: relative;
   width: 100%;

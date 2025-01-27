@@ -1,38 +1,38 @@
-import React, { useRef, useState } from "react";
-import { useFrame } from "@react-three/fiber";
+  import React, { useRef } from "react";
+  import { useFrame } from "@react-three/fiber";
+  import { useGLTF } from "@react-three/drei";
+  import * as THREE from "three";
 
-function Butterfly({ position }) {
-  const butterflyRef = useRef();
-  const [hovered, setHovered] = useState(false);
+  
+  export default function Butterfly() {
+    const butterflyRef = useRef();
+  
+    // Load the 3D butterfly model
+    const { scene, animations } = useGLTF("/assets/Butterfly_Animation_Assignment.glb");
+  
+    // Adjust the butterfly's rotation
+    scene.rotation.set(Math.PI / 0.1, 1, 0.5); // Rotate 90 degrees around the X-axis
+  
+    const mixer = useRef();
+  if (!mixer.current && animations.length > 0) {
+    mixer.current = new THREE.AnimationMixer(scene);
+    animations.forEach((clip) => mixer.current.clipAction(clip).play());
+  }
 
-  // Use frame to continuously check and update butterfly position
-  useFrame(() => {
-    if (hovered) {
-      // Flutter outward when hovered
-      butterflyRef.current.position.x += Math.random() * 0.2 - 0.1; // Random small movements
-      butterflyRef.current.position.y += Math.random() * 0.2 - 0.1;
-      butterflyRef.current.position.z += Math.random() * 0.2 - 0.1;
-    } else {
-      // Gradually return to original position
-      butterflyRef.current.position.x += (position[0] - butterflyRef.current.position.x) * 0.1;
-      butterflyRef.current.position.y += (position[1] - butterflyRef.current.position.y) * 0.1;
-      butterflyRef.current.position.z += (position[2] - butterflyRef.current.position.z) * 0.1;
-    }
+  // Update animation frames in the render loop
+  useFrame((state, delta) => {
+    if (mixer.current) mixer.current.update(delta);
   });
-
-  return (
-    <mesh
-      ref={butterflyRef}
-      position={position}
-      onPointerOver={() => setHovered(true)} // Trigger flutter on hover
-      onPointerOut={() => setHovered(false)} // Stop fluttering when mouse leaves
-    >
-      {/* Replace sphereGeometry with butterfly model if available */}
-      <sphereGeometry args={[0.15, 16, 16]} />
-      <meshStandardMaterial color={hovered ? "pink" : "purple"} />
-    </mesh>
-  );
-}
-
-export default Butterfly;
+    
+  
+    return (
+      <primitive
+        object={scene}
+        ref={butterflyRef}
+        position={[0, 0, 0]} // Adjust position if necessary
+        scale={1} // Adjust scale if the butterfly is too large or too small
+      />
+    );
+  }
+  
 
