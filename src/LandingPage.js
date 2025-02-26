@@ -1,18 +1,16 @@
 import React from "react";
-import ButterflyAnimation from "./ButterflyAnimation";
+import Layout from "./Layout";
+import Navbar from "./Navbar"; 
+import "./LandingPage.css";
 
-
-function LandingPage() {
+function LandingPage({ onEnter }) {
   return (
-    <div className="landing-page">
-      <section className="hero">
-      <ButterflyAnimation />
-        <h1>Welcome to Lara's Portfolio!</h1>
-        <p>Where creativity meets code. Explore my journey, projects, and more!</p>
-        <button className="cta-button">See My Work</button>
-      </section>
+    <div className="landing-page" onClick={onEnter}>
+      <Navbar />
+      
     </div>
   );
 }
 
 export default LandingPage;
+

@@ -26,7 +26,6 @@ export default function ButterflyAnimation() {
           zIndex: 10,
         }}
       >
-        Optional Loading Indicator or UI
       </div>
     </div>
   );

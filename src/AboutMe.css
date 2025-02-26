@@ -1,0 +1,91 @@
+/* AboutMe.css */
+
+/* Basic reset */
+* {
+  box-sizing: border-box;
+}
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Main container for the About Me page */
+.about-me-container {
+  /* Enough top padding so the navbar doesn’t overlap */
+  padding-top: 100px;
+  padding-bottom: 40px;
+  max-width: 1000px;  /* a bit wider for two columns */
+  margin: 0 auto;     /* center horizontally */
+  display: flex;
+  flex-wrap: wrap;    /* wrap columns on small screens */
+  gap: 2rem;          /* space between columns */
+  align-items: flex-start;
+  /* optional: if you want the text vertically centered with the image:
+     align-items: center; 
+  */
+}
+
+/* Left column: Profile image */
+.about-me-image {
+  flex: 1 1 300px;   /* allow the image column to shrink/grow */
+  text-align: center;
+}
+
+.about-me-image img {
+  width: 100%;
+  max-width: 300px;   /* bigger image */
+  height: auto;       /* maintain aspect ratio */
+  border-radius: 8px; /* slight rounded corners, or remove this */
+  object-fit: cover;
+
+}
+
+/* Right column: Text content */
+.about-me-text {
+  flex: 2 1 500px;
+  color: #333;
+}
+
+/* Headings & paragraphs */
+.about-me-text h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.about-me-text h2 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  font-weight: normal;
+  color: #555;
+}
+
+.about-me-text p {
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.about-me-text ul {
+  list-style: disc;
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+.about-me-text li {
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+}
+
+.about-me-text h3 {
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+  color: #444;
+  font-size: 1.3rem;
+}
+
+
+
+
+
+
+

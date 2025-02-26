@@ -1,3 +1,33 @@
+/* Necessary body stuff */
+.navbar .logo a,
+.navbar .logo a:link,
+.navbar .logo a:visited,
+.navbar .logo a:hover,
+.navbar .logo a:active {
+  color: #fff !important;
+  text-decoration: none !important;
+}
+
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+html, body {
+  margin: 0;
+  padding: 0;
+}
+html, body {
+  overflow-x: hidden;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+
+}
+
 /* Navbar Styles */
 .navbar {
   display: flex;
@@ -11,6 +41,8 @@
   z-index: 1000;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif; 
+  transition: opacity 0.5s ease-in-out;
+  text-decoration: none;
 }
 
 .logo {
@@ -18,6 +50,7 @@
   font-weight: bold;
   color: rgb(255, 255, 255);
   text-transform: uppercase;
+  text-decoration: none !important;
 }
 
 .nav-links {
@@ -26,13 +59,15 @@
   list-style: none;
   margin: 0;
   padding: 0;
+  text-decoration: none !important;
 }
 
 .nav-links a {
-  text-decoration: none;
+  pointer-events: auto;
   font-size: 1rem;
   color: rgb(255, 255, 255);
   transition: color 0.3s;
+  text-decoration: none !important;
 }
 
 .nav-links a:hover {
@@ -49,13 +84,13 @@
   /* background: linear-gradient(135deg, #ff0080, #ffcccc); */
   background: linear-gradient(
     135deg, /* Angle of the gradient */
-    #ff66cc, /* First pink tone */
+    #fac2e7, /* First pink tone */
     #ffccff 20%, /* Softer pink */
-    #b8b3fb 40%, /* Purple */
-    #aad5ff 60%, /* Blue */
-    #b8b3fb 80%, /* Purple */
+    #ccc9fd 40%, /* Purple */
+    #b8d8f9 60%, /* Blue */
+    #d3d0fc 80%, /* Purple */
     #ffccff 90%, /* Softer pink */
-    #ff66cc /* Pink again */
+    #ffb7e7 /* Pink again */
   );
   background-size: 200% 200%;
   animation: gradientAnimation 10s ease infinite;
@@ -119,8 +154,7 @@
   background-color: #ff1c8d;
 }
 
-/* Butterfly */
-
+/* Butterfly Stuff */
 
 .landing-page {
   position: relative;
@@ -129,21 +163,51 @@
   overflow: hidden;
 }
 
-.hero-content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  color: white;
-  z-index: 1; /* Ensure it stays above the animation */
-}
-
 canvas {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 0;
+  z-index: 150;
+  pointer-events: none;
+  background-color: none;
 }
+
+/* IntroPage */
+
+.intro-page {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(135deg, #ff66cc, #b8b3fb, #aad5ff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 100;
+  overflow: hidden;
+}
+
+.intro-title {
+  position: absolute;
+  top: 30%;
+  font-size: 5rem;
+  font-weight: bold;
+  color: white;
+  z-index: 10;
+  font-family: 'Poppins', sans-serif; 
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.intro-title:hover {
+  transform: scale(1.1);
+}
+
+
+
+
+
+
