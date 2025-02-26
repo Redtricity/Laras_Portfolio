@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/laras-portfolio-site/static/css/main.9b90379b.css",
+    "main.js": "/laras-portfolio-site/static/js/main.972ab195.js",
+    "index.html": "/laras-portfolio-site/index.html",
+    "main.9b90379b.css.map": "/laras-portfolio-site/static/css/main.9b90379b.css.map",
+    "main.972ab195.js.map": "/laras-portfolio-site/static/js/main.972ab195.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9b90379b.css",
+    "static/js/main.972ab195.js"
+  ]
+}
