@@ -1,5 +1,6 @@
 import React from "react";
 import ButterflyAnimation from "./ButterflyAnimation";
+import "./index.css"; 
 
 function IntroPage({ onEnter }) {  // ✅ Accept onEnter as a prop
   return (
