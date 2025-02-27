@@ -24,7 +24,7 @@ function App() {
   }
 
   return (
-    
+    <BrowserRouter basename="/Laras_Portfolio">
     <Router>
       <Layout>
         <Routes>
@@ -35,6 +35,7 @@ function App() {
         </Routes>
       </Layout>
     </Router>
+    </BrowserRouter>
   );
 }
 
