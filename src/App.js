@@ -23,7 +23,7 @@ function App() {
   }
 
   return (
-    <Router basename="/Laras_Portfolio/">
+    <Router basename="/Laras_Portfolio">
       <Layout>
         <Routes>
           <Route
