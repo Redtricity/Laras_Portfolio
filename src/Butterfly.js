@@ -11,7 +11,8 @@ export default function Butterfly() {
   const flyingTimeout = useRef(null);
 
   // Load the 3D butterfly model with animations
-  const { scene, animations } = useGLTF("/assets/Butterfly_Animation_Assignment.glb");
+  const { scene, animations } = useGLTF(process.env.PUBLIC_URL + "/assets/Butterfly_Animation_Assignment.glb");
+
 
   useEffect(() => {
     if (animations.length) {
