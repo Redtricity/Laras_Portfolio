@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/Laras_Portfolio/static/css/main.9b90379b.css",
-    "main.js": "/Laras_Portfolio/static/js/main.972ab195.js",
+    "main.js": "/Laras_Portfolio/static/js/main.4d2a50e8.js",
     "index.html": "/Laras_Portfolio/index.html",
     "main.9b90379b.css.map": "/Laras_Portfolio/static/css/main.9b90379b.css.map",
-    "main.972ab195.js.map": "/Laras_Portfolio/static/js/main.972ab195.js.map"
+    "main.4d2a50e8.js.map": "/Laras_Portfolio/static/js/main.4d2a50e8.js.map"
   },
   "entrypoints": [
     "static/css/main.9b90379b.css",
-    "static/js/main.972ab195.js"
+    "static/js/main.4d2a50e8.js"
   ]
 }
