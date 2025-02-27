@@ -28,7 +28,7 @@ function App() {
         <Routes>
           <Route
             path="/"
-            element={entered ? <IntroPage /> : <AboutMe onEnter={() => setEntered(true)} />}
+            element={!entered ? <IntroPage onEnter={() => setEntered(true)} /> : <AboutMe />}
           />
           <Route path="/about" element={<AboutMe />} />
           <Route path="/projects" element={<Projects />} />
