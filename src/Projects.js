@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import "./Projects.css"; 
 import Navbar from "./Navbar";
+import TinkerbellSparkle from "./TinkerbellSparkle";
 
 
 const projectsData = [
@@ -66,6 +67,7 @@ function Projects() {
   return (
     <>
       <Navbar />
+      <TinkerbellSparkle />
       <div className="projects-page">
         <h2>My Projects</h2>
         <div className="projects-container">

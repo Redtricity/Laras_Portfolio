@@ -2,12 +2,13 @@ import React from "react";
 import Navbar from "./Navbar";
 import { Link } from "react-router-dom";
 import "./AboutMe.css";
+import TinkerbellSparkle from "./TinkerbellSparkle";
 
 function AboutMe() {
   return (
     <>
       <Navbar />
-
+      <TinkerbellSparkle />
       {/* Intro Section */}
       <div className="about-me-container white-section">
         {/* Left column: Profile Image */}

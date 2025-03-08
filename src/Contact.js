@@ -2,10 +2,12 @@ import React from "react";
 import Navbar from "./Navbar";
 import Layout from "./Layout";
 import "./Contact.css";
+import TinkerbellSparkle from "./TinkerbellSparkle";
 
 function Contact() {
   return (
     <><Navbar />
+    <TinkerbellSparkle />
     <div className="contact-page">
       <h2>Contact Me</h2>
       <p>You can reach me via any of the details below:</p>
