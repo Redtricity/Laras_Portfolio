@@ -4,28 +4,18 @@
 .navbar .logo a:visited,
 .navbar .logo a:hover,
 .navbar .logo a:active {
-  color: #fff !important;
+  color: hsl(0, 0%, 25%) !important;
   text-decoration: none !important;
 }
 
-
-*, *::before, *::after {
+/* *, *::before, *::after {
   box-sizing: border-box;
-}
-html, body {
-  margin: 0;
-  padding: 0;
-}
-html, body {
-  overflow-x: hidden;
-}
+} */
+
 
 html, body {
   margin: 0;
   padding: 0;
-  width: 100vw;
-  height: 100vh;
-
 }
 
 /* Navbar Styles */
@@ -34,7 +24,7 @@ html, body {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  background-color: transparent; /* Transparent for now */
+  background-color: transparent;
   position: fixed;
   width: 100%;
   top: 0;
@@ -48,7 +38,7 @@ html, body {
 .logo {
   font-size: 1.5rem;
   font-weight: bold;
-  color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0) !important;
   text-transform: uppercase;
   text-decoration: none !important;
 }
@@ -56,6 +46,7 @@ html, body {
 .nav-links {
   display: flex;
   gap: 2rem;
+  color: rgb(98, 97, 97);
   list-style: none;
   margin: 0;
   padding: 0;
@@ -65,7 +56,7 @@ html, body {
 .nav-links a {
   pointer-events: auto;
   font-size: 1rem;
-  color: rgb(255, 255, 255);
+  color: rgb(106, 106, 106);
   transition: color 0.3s;
   text-decoration: none !important;
 }
@@ -74,6 +65,14 @@ html, body {
   color: #ffccf0; /* Slightly lighter pink hover effect */
 }
 
+/* Lil butterfly on nav */
+.mini-animation {
+  width: 110px;      /* increase width */
+  height: 80px;    /* increase height */
+  position: relative;
+  margin-top: -20px;
+  margin-bottom: 30px;}
+
 /*Layout Styles*/
 .background {
   position: fixed;
@@ -81,78 +80,11 @@ html, body {
   left: 0;
   width: 100%;
   height: 100%;
-  /* background: linear-gradient(135deg, #ff0080, #ffcccc); */
-  background: linear-gradient(
-    135deg, /* Angle of the gradient */
-    #fac2e7, /* First pink tone */
-    #ffccff 20%, /* Softer pink */
-    #ccc9fd 40%, /* Purple */
-    #b8d8f9 60%, /* Blue */
-    #d3d0fc 80%, /* Purple */
-    #ffccff 90%, /* Softer pink */
-    #ffb7e7 /* Pink again */
-  );
-  background-size: 200% 200%;
-  animation: gradientAnimation 10s ease infinite;
+  background-color: rgb(255, 255, 255);
+  /* background-size: 200% 200%; */
   z-index: -2; /* Send the background behind all content */
 }
 
-/* Keyframes for animating the gradient */
-@keyframes gradientAnimation {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-
-/*Landing Page Styles*/
-
-.landing-page {
-  padding-top: 80px; /* This should match the height of your navbar */
-}
-
-.hero {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh; 
-  color: white;
-  text-align: center;
-  padding: 0 2rem;
-  z-index: 2;
-}
-
-.hero h1 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-}
-
-.hero p {
-  font-size: 1.25rem;
-  margin-bottom: 2rem;
-}
-
-.cta-button {
-  padding: 1rem 2rem;
-  background-color: #ff4da6;
-  color: white;
-  border: none;
-  border-radius: 25px;
-  cursor: pointer;
-  font-size: 1rem;
-  transition: background-color 0.3s;
-}
-
-.cta-button:hover {
-  background-color: #ff1c8d;
-}
 
 /* Butterfly Stuff */
 
@@ -180,7 +112,7 @@ canvas {
   position: fixed;
   width: 100vw;
   height: 100vh;
-  background: linear-gradient(135deg, #ff66cc, #b8b3fb, #aad5ff);
+  background-color: white;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -194,7 +126,7 @@ canvas {
   top: 30%;
   font-size: 5rem;
   font-weight: bold;
-  color: white;
+  color: rgb(102, 101, 101);
   z-index: 10;
   font-family: 'Poppins', sans-serif; 
   text-transform: uppercase;
@@ -205,6 +137,8 @@ canvas {
 .intro-title:hover {
   transform: scale(1.1);
 }
+
+
 
 
 

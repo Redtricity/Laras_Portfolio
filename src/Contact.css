@@ -1,20 +1,13 @@
 /* Contact.css */
 
-* {
-  box-sizing: border-box;
-}
 html, body {
   margin: 0;
   padding: 0;
-  font-family: "Poppins", sans-serif;
 }
-
-/* A light gradient background for the contact page */
 .contact-page {
   min-height: 100vh;
   padding: 3rem 1rem;
   text-align: center;
-  background: linear-gradient(135deg, #fc8ac8, #c3b7ff);
   color: #333;
 }
 
@@ -26,8 +19,8 @@ html, body {
 
 .contact-details {
   margin: 2rem auto;
-  display: inline-block; /* so it doesn't stretch full width */
-  text-align: left;      /* left-align the details */
+  display: inline-block; 
+  text-align: left;      
 }
 
 .contact-details p {

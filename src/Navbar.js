@@ -1,10 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import './index.css';
+import MiniButterflyAnimation from "./MiniButterflyAnimation";
 
 function Navbar() {
   return (
     <header className="navbar">
-      <div className="logo"> <Link to="/">Lara McIntyre</Link></div>
+      <div className="logo"> <Link to="/" style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
+          <span>Lara McIntyre</span>
+          <MiniButterflyAnimation /></Link></div>
       <nav>
         <ul className="nav-links">
         <li><Link to="/about">About Me</Link></li>

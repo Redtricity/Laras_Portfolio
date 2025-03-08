@@ -13,10 +13,11 @@ html, body {
 /* Main container for the About Me page */
 .about-me-container {
   /* Enough top padding so the navbar doesn’t overlap */
-  padding-top: 100px;
-  padding-bottom: 40px;
+  margin-top: 80px;
+  margin-left: 170px;
+  /* padding-bottom: 40px; */
   max-width: 1000px;  /* a bit wider for two columns */
-  margin: 0 auto;     /* center horizontally */
+  /* margin: 0 auto;     */
   display: flex;
   flex-wrap: wrap;    /* wrap columns on small screens */
   gap: 2rem;          /* space between columns */
@@ -82,6 +83,57 @@ html, body {
   color: #444;
   font-size: 1.3rem;
 }
+
+.deaf-accessibility-section, 
+.project-highlights-section {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.project-highlights-section .projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.project-card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+  padding: 1rem;
+  text-align: center;
+}
+
+.project-card img {
+  max-width: 100%;
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
+}
+
+/* White Section */
+.white-section {
+  background-color: #ffffff !important; /* White */
+  padding: 2rem 1rem;
+}
+
+/* Grey Section */
+.grey-section {
+  width: 100%;                /* Fill full browser width */
+  background-color: #f2f2f2;  /* Your light gray */
+  padding: 2rem 0;           /* Top/bottom spacing */
+  margin: 0;                 /* Remove default margins if any */
+}
+
+/* Inner container for readable text */
+.deaf-accessibility-content {
+  max-width: 1200px;  /* or whatever width you want */
+  margin: 0 auto;     /* center horizontally */
+  padding: 0 1rem;    /* small side padding for breathing room */
+}
+
+
 
 
 
